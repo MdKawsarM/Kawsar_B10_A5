@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind & daisyUI CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/036226d307.js" crossorigin="anonymous"></script>
+
+    <!-- Google font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        manrope: ['Lexend', 'sans-serif'],
+                    },
+                    backgroundImage: {
+
+                    }
+                },
+            },
+        }
+    </script>
+
+    <title>B L O G</title>
+</head>
+
+<body class="font-Lexend">
+    <main>
+        <header class="sticky z-10 backdrop-blur-md bg-white/30 top-0">
+            <nav class="w-11/12 mx-auto">
+                <div class="navbar">
+                    <div class="navbar-start">
+                        <button onclick="gotoLink(this)" value="blog.html"
+                            class="bg-[#B4F461] rounded-lg px-6 py-2 font-bold flex gap-2">
+                            <div>
+                                Home
+                            </div>
+                        </button>
+                    </div>
+
+            </nav>
+        </header>
+        <section class="blog w-10/12 mx-auto mb-20">
+            <h1 class="text-center font-bold text-4xl py-10">Blog Questions</h1>
+
+            <div class="question border-2 rounded-lg px-10 py-4 mb-2">
+                <h2 class="font-semibold text-lg pb-3">Q-1. What is the Document Object Model (DOM)?</h2>
+                <hr>
+                <p class="font-semibold text-lg pt-2">Answer:</p>
+                <p class="text-gray-500">The DOM is a programming interface for HTML and XML documents. It represents
+                    the page so that programs can change the document structure, style, and content dynamically. The DOM
+                    represents the document as nodes and objects, which allows languages like JavaScript to manipulate
+                    it.</p>
+            </div>
+
+            <div class="question border-2 rounded-lg px-10 py-4 mb-2">
+                <h2 class="font-semibold text-lg pb-3">Q-2. How do you select an element from the DOM?</h2>
+                <hr>
+                <p class="font-semibold text-lg pt-2">Answer:</p>
+                <p class="text-gray-500">You can select an element from the DOM using methods such as
+                    <code>getElementById</code>, <code>querySelector</code>, and <code>getElementsByClassName</code>.
+                    These allow you to retrieve elements based on their ID, class, tag name, or CSS selectors.
+                </p>
+            </div>
+
+            <div class="question border-2 rounded-lg px-10 py-4 mb-2">
+                <h2 class="font-semibold text-lg pb-3">Q-3. What is event delegation in the context of the DOM, and why
+                    is it useful?</h2>
+                <hr>
+                <p class="font-semibold text-lg pt-2">Answer:</p>
+                <p class="text-gray-500">Event delegation is a technique in which a single event handler is attached to
+                    a parent element, allowing it to manage events triggered by its child elements. This is useful
+                    because it reduces the need for multiple event listeners, improving performance and making it easier
+                    to manage dynamic elements.</p>
+            </div>
+
+            <div class="question border-2 rounded-lg px-10 py-4 mb-2">
+                <h2 class="font-semibold text-lg pb-3">Q-4. How do you manipulate an element's attributes and styles
+                    using the DOM?</h2>
+                <hr>
+                <p class="font-semibold text-lg pt-2">Answer:</p>
+                <p class="text-gray-500">You can manipulate an element's attributes using methods like
+                    <code>setAttribute</code> and <code>getAttribute</code>. To manipulate styles, you can directly
+                    modify the <code>style</code> property of an element, or by adding/removing classes using
+                    <code>classList.add()</code> and <code>classList.remove()</code>.
+                </p>
+            </div>
+        </section>
+
+
+
+        <Script>
+            // set home page link
+            function gotoLink(link) {
+                console.log(link.value);
+                location.href = 'index.html';
+            }
+        </Script>
+    </main>
+</body>
+
+</html>
